@@ -1,7 +1,8 @@
 export function Calculadora(cadena) {
     let cadenaDividida = cadena.split(",")
-    let num1 = parseInt(cadenaDividida[0],10)
-    let num2 = parseInt(cadenaDividida[1],10)
-    let suma = num1 + num2
+    let suma = 0
+    for(let i in cadenaDividida){
+        suma = suma + parseInt(cadenaDividida[i],10)
+    }
     return suma;
 }
