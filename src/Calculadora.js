@@ -1,10 +1,15 @@
-export function Calculadora(cadena) {
+export function Calculadora(cadena,separador) {
     let separadores = [",","-"]
     let aux = 0
     let suma = 0
     let auxCar = ""
     let i = 0
     let cadenaDividida
+
+    aux = cadena.search(separador)
+    if(aux == -1){
+        separadores.push(separador);
+    }
 
     separadores.forEach(function(caracter){
         aux = cadena.search(caracter);
